@@ -193,11 +193,12 @@ class Fotolia_Api
      * @param  int    $language_id
      * @return array
      */
-    public function getGalleries($language_id = Fotolia_Api::LANGUAGE_ID_EN_US)
+    public function getGalleries($language_id = Fotolia_Api::LANGUAGE_ID_EN_US, $thumbnail_size = 110)
     {
         return $this->_api('getGalleries',
                              array(
-                                 'language_id' => $language_id
+                                 'language_id' => $language_id,
+                                 'thumbnail_size' => $thumbnail_size,
                              ));
     }
 
